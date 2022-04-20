@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-butao',
@@ -9,7 +9,7 @@ export class ButaoComponent implements OnInit {
   @Input() classe: string;
   @Input() nome: string;
 
-  @Output() clicked = new; EventEmitter();
+  @Output() clicked = new EventEmitter();
 
   constructor() {}
 
