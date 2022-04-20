@@ -6,8 +6,21 @@ import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
   styleUrls: ['./butao.component.css'],
 })
 export class ButaoComponent implements OnInit {
-  @Input() classe: string;
+  @Input() cor: string;
   @Input() nome: string;
+  @Input() outline: boolean;
+  @Input() size: 'small' | 'normal' | 'big' = 'normal';
+
+  getsizeButtonSize() {
+    switch (this.size) {
+      case 'small':
+        return 'btn-sm';
+      case 'normal':
+        return '';
+      case 'big':
+        return 'btn-lg';
+    }
+  }
 
   @Output() clicked = new EventEmitter();
 

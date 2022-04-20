@@ -1,3 +1,9 @@
-<button (click)="clicked.emit()" type="button" class="{{ classe }}">
+<button
+  (click)="clicked.emit()"
+  type="button"
+  class="btn btn-{{ outline == true ? 'outline-' : '' }}{{ cor }} {{
+    getsizeButtonSize()
+  }}"
+>
   {{ nome }}
 </button>
