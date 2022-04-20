@@ -5,7 +5,7 @@
     getsizeButtonSize()
   }} {{ cornerBadge ? 'position-relative' : '' }}"
 >
-  {{ nome }}
+  <ng-content></ng-content>
   <span *ngIf="badge" class="{{ getCornerBadge() }} bg-{{ corBadge }}">{{
     badge
   }}</span>

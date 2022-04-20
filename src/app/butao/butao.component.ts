@@ -9,7 +9,6 @@ export class ButaoComponent implements OnInit {
   @Input() cor: string;
   @Input() badge: string;
   @Input() corBadge: string;
-  @Input() nome: string;
   @Input() outline: boolean;
   @Input() cornerBadge: boolean;
   @Input() size: 'small' | 'normal' | 'big' = 'normal';
