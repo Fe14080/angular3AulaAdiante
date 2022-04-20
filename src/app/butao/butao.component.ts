@@ -7,8 +7,11 @@ import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 })
 export class ButaoComponent implements OnInit {
   @Input() cor: string;
+  @Input() badge: string;
+  @Input() corBadge: string;
   @Input() nome: string;
   @Input() outline: boolean;
+  @Input() cornerBadge: boolean;
   @Input() size: 'small' | 'normal' | 'big' = 'normal';
 
   getsizeButtonSize() {
@@ -19,6 +22,14 @@ export class ButaoComponent implements OnInit {
         return '';
       case 'big':
         return 'btn-lg';
+    }
+  }
+
+  getCornerBadge(): string {
+    if (this.cornerBadge) {
+      return 'position-absolute top-0 start-100 translate-middle badge rounded-pill';
+    } else {
+      return 'badge';
     }
   }
 

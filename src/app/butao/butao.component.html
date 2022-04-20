@@ -3,7 +3,10 @@
   type="button"
   class="btn btn-{{ outline == true ? 'outline-' : '' }}{{ cor }} {{
     getsizeButtonSize()
-  }}"
+  }} {{ cornerBadge ? 'position-relative' : '' }}"
 >
   {{ nome }}
+  <span *ngIf="badge" class="{{ getCornerBadge() }} bg-{{ corBadge }}">{{
+    badge
+  }}</span>
 </button>
