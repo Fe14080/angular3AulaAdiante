@@ -1,11 +1,59 @@
-<app-butao
-  (clicked)="onButtonClick()"
-  [cor]="'danger'"
-  [outline]="true"
-  [size]="'big'"
-  [badge]="'9'"
-  [corBadge]="'danger'"
-  [cornerBadge]="true"
-  >Show live</app-butao
->
-<app-alerta [cor]="'secondary'">Teste 123</app-alerta>
+<div class="container">
+  <div class="dropdown">
+    <button
+      class="btn btn-secondary dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton1"
+    >
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu">
+      <li>
+        <button class="dropdown-item">1</button>
+      </li>
+      <li>
+        <button class="dropdown-item">3</button>
+      </li>
+      <li>
+        <button class="dropdown-item">5</button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container mt-3">
+  <ul class="list-group">
+    <li *ngFor="let user of users" class="list-group-item">
+      <img src="{{ user.picture.thumbnail }}" alt="" />
+      {{ user.name.first }} {{ user.name.last }}
+    </li>
+  </ul>
+</div>
+
+<div class="container">
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <button (click)="pageAnt()" class="page-link">Anterior</button>
+      </li>
+      <li class="page-item">
+        <button class="page-link">{{ page - 2 }}</button>
+      </li>
+      <li class="page-item">
+        <button class="page-link">{{ page - 1 }}</button>
+      </li>
+      <li class="page-item active">
+        <button class="page-link">{{ page }}</button>
+      </li>
+      <li class="page-item">
+        <button class="page-link">{{ page + 1 }}</button>
+      </li>
+      <li class="page-item">
+        <button class="page-link">{{ page + 2 }}</button>
+      </li>
+      <li class="page-item">
+        <button (click)="pageProx()" class="page-link">Proximo</button>
+      </li>
+    </ul>
+  </nav>
+</div>
